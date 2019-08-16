@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/9ea95fa325.js"></script>
+    <title>Pdf Viewer</title>
+</head>
+<body>
+    <h1>PDF.js Previous/Next example</h1>
+    <div id="pdfViewer">
+        <div id="top-bar">
+            <span id="page-manager">
+                <button class="page-btn viewer-btn" id="prev-page">
+                    <i class="fas fa-arrow-circle-left"></i> Page précédente
+                </button>
+                <button class="page-btn viewer-btn" id="next-page">
+                    Page suivante <i class="fas fa-arrow-circle-right"></i>
+                </button>
+                <span class="page-info">
+                    Page <input type="text" id="page-num" class="sm-nb-input" ></input> de <span id="page-count"></span>
+                </span>
+            </span>
+            <span id="zoom-manager">
+                <button class="zoom-btn viewer-btn" id="zoom-out">
+                    <i class="fas fa-search-minus"></i>
+                </button>
+                <button class="zoom-btn viewer-btn" id="zoom-in">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+                <span class="zoom-info">
+                        Zoom <input type="text" id="zoom-num" class="sm-nb-input"></input>
+                </span>
+            </span>
+        </div>
+        <canvas id="myPdf" style="vertical-align: bottom" ></canvas>
+        
+        <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+        <script src="js/OneSysPDFViewer.js"></script>
+        <script type="text/javascript">
+        //On mets les parametres ici 
+        url = "../CitationNeededBookSample.pdf";
+        canvasId = "myPdf";
+        
+        </script>
+    </div>
+</body>
+</html>
